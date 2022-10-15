@@ -5,22 +5,39 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+	
+		const listOfColors = ["red", "green", "yellow"];
+		const [color, setColor] = useState ("red")
+
+		const handleClick = (e) => {
+			const target = e.target.className;
+			console.log(target);
+			const colorIndex = Math.round(Math.random()*2)
+			setColor(listOfColors[colorIndex])
+		}
+		return (
+			<div className="text-center">
+				{(() => {
+					switch (color) {
+						case "red" : 
+						<div id="red" className="light red" onClick={handleClick}>{color}</div>
+						break;
+					case "green":
+						<div id="green" className="light green" onClick={handleClick}>{color}</div>
+						break;
+					case "yellow":
+						<div id="yellow" className="light yellow" onClick={handleClick}>{color}</div>
+						break;
+						default:
+							return <div>no color</div>
+					}
+				
+				})() }
+				{/*<div className="light"{`light ${color}`} onClick={handleClick}>{color}</div>*/}
+			
+			</div>
+		)	
+		}
+
 
 export default Home;

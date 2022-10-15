@@ -10,3 +10,24 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.light{
+    border-color:black;
+    border-style: solid;
+    border-radius: 10px;
+    max-width: 50px;
+
+}
+.redoff {
+    background-color:rgb(111, 50, 50);
+}
+.redon {
+    background-color: red;
+}
+.green{
+    background-color: green;
+
+}
+.yellow {
+    background-color: "yellow";
+}
