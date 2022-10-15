@@ -104,30 +104,20 @@ export default Home;
 
 /** 
 const Home = () => {
-	const listOfColors = ["red", "green", "yellow"];
-	const handleLight = () => {
-		const colorIndex = Math.round(Math.random()*2);
-		console.log(colorIndex);
-		for(let i = 0; i < listOfColors.length; i++) {
-			document.getElementById(listOfColors[i]).style.opacity = '30%'
-		}
-		document.getElementById(listOfColors[colorIndex]).style.opacity = '100%'
-	
-	}
 	return (
 		<div className="text-center">
-			<div class="trafficlight">
-				<div class="protector"></div>
-				<div class="protector"></div>
-				<div class="protector"></div>
-				<div id="red" class="red"></div>
-				<div id="yellow" class="yellow"></div>
-				<div id="green" class="green"></div>
-			</div>
-			<div className="traffic-jam styke">
-				<button onClick={handleLight}>Pulse aqui</button>
-			
-			</div>
+			<h1 className="text-center mt-5">Hello Rigo!</h1>
+			<p>
+				<img src={rigoImage} />
+			</p>
+			<a href="#" className="btn btn-success">
+				If you see this green button... bootstrap is working...
+			</a>
+			<p>
+				Made by{" "}
+				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
+				love!
+			</p>
 		</div>
 	);
 };
